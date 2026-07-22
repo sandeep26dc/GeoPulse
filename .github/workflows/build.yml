@@ -19,11 +19,15 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    # Setup Gradle directly without needing a committed ./gradlew script
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: '8.7'
 
+    # Run build using global gradle runner
     - name: Build Debug APK
-      run: ./gradlew assembleDebug
+      run: gradle assembleDebug
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
