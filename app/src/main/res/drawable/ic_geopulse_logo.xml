@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Dark OLED Background Container -->
+    <path
+        android:fillColor="#0B0F17"
+        android:pathData="M18,0h72c9.9,0 18,8.1 18,18v72c0,9.9 -8.1,18 -18,18H18c-9.9,0 -18,-8.1 -18,-18V18C0,8.1 8.1,0 18,0z" />
+    
+    <!-- Outer Glow Pulse Ring -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="3"
+        android:pathData="M54,20 A34,34 0 1,1 53.9,20" />
+        
+    <!-- Futuristic Crosshair Nodes -->
+    <path
+        android:strokeColor="#8A2BE2"
+        android:strokeWidth="2"
+        android:pathData="M54,10 L54,26 M54,82 L54,98 M10,54 L26,54 M82,54 L98,54" />
+
+    <!-- Central Signal Pulse Diamond -->
+    <path
+        android:fillColor="#00F0FF"
+        android:pathData="M54,42 L66,54 L54,66 L42,54 Z" />
+</vector>
