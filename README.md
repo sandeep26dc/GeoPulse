@@ -5,7 +5,7 @@
   <p><strong>Precision Android Location Telemetry Engine</strong></p>
 
   <!-- Badges -->
-  <a href="https://github.com/your-username/GeoPulse/actions">
+  <a href="https://github.com/sandeep26dc/GeoPulse/actions">
     <img src="https://img.shields.io/badge/Build-Passing-10B981?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Status">
   </a>
   <a href="https://kotlinlang.org/">
@@ -14,7 +14,7 @@
   <a href="https://developer.android.com/jetpack/compose">
     <img src="https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?style=for-the-badge&logo=android&logoColor=white" alt="Compose">
   </a>
-  <a href="https://github.com/your-username/GeoPulse/releases">
+  <a href="https://github.com/sandeep26dc/GeoPulse/releases">
     <img src="https://img.shields.io/badge/Android-API%2026%2B-000000?style=for-the-badge&logo=android&logoColor=3DDC84" alt="Android Version">
   </a>
 
@@ -29,7 +29,7 @@
     <em>GeoPulse is a lightweight, high-performance telemetry dashboard designed for Android. Engineered with an obsidian and titanium design language, it transforms standard location tracking into an executive instrument cluster.</em>
   </p>
 
-  <a href="https://github.com/your-username/GeoPulse/releases">
+  <a href="https://github.com/sandeep26dc/GeoPulse/releases">
     <img src="https://img.shields.io/badge/⚡_DOWNLOAD_DEBUG_APK-05070A?style=for-the-badge&logo=android&logoColor=white" alt="Download APK">
   </a>
 
@@ -72,10 +72,10 @@
 
 ```bash
 # Clone the repository
-git clone [https://github.com/your-username/GeoPulse.git](https://github.com/your-username/GeoPulse.git)
+git clone [https://github.com/sandeep26dc/GeoPulse.git](https://github.com/sandeep26dc/GeoPulse.git)
 
 # Navigate into project directory
 cd GeoPulse
 
 # Assemble Debug APK
-gradle assembleDebug
+./gradlew assembleDebug
