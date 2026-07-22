@@ -11,7 +11,7 @@
         android:label="GeoPulse"
         android:roundIcon="@drawable/ic_geopulse_logo"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.Material.NoTitleBar">
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
         <activity
             android:name=".MainActivity"
             android:exported="true"
