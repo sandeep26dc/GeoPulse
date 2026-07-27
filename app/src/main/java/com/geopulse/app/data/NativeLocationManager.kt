@@ -24,10 +24,30 @@ class NativeLocationManager(context: Context) {
         Priority.PRIORITY_HIGH_ACCURACY, 1000L
     ).apply {
         setMinUpdateIntervalMillis(500L)
+        setWaitForAccurateLocation(false)
     }.build()
 
     @SuppressLint("MissingPermission")
     fun startLocationUpdates(onUpdate: (LocationState) -> Unit) {
+        // 1. Immediately push last known location so UI doesn't sit at 0.0 instantly
+        client.lastLocation.addOnSuccessListener { loc ->
+            loc?.let {
+                onUpdate(
+                    LocationState(
+                        latitude = it.latitude,
+                        longitude = it.longitude,
+                        altitude = it.altitude,
+                        speedKmh = (it.speed * 3.6f),
+                        accuracy = it.accuracy,
+                        bearing = it.bearing,
+                        isGpsActive = true,
+                        error = null
+                    )
+                )
+            }
+        }
+
+        // 2. Setup continuous live telemetry listener
         val callback = object : LocationCallback() {
             override fun onLocationResult(result: LocationResult) {
                 result.lastLocation?.let { loc ->
@@ -48,7 +68,7 @@ class NativeLocationManager(context: Context) {
         }
 
         try {
-            client.requestLocationUpdates(locationRequest, callback, Looper.getMainLooper())
+            client.requestLocationUpdates(locationRequest, callback, Looper.getMainLocateLooper() ?: Looper.getMainLooper())
         } catch (e: Exception) {
             onUpdate(LocationState(error = e.localizedMessage ?: "GPS Initialization Failed"))
         }
