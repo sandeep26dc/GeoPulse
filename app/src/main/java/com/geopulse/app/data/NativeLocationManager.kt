@@ -68,7 +68,7 @@ class NativeLocationManager(context: Context) {
         }
 
         try {
-            client.requestLocationUpdates(locationRequest, callback, Looper.getMainLocateLooper() ?: Looper.getMainLooper())
+            client.requestLocationUpdates(locationRequest, callback, Looper.getMainLooper())
         } catch (e: Exception) {
             onUpdate(LocationState(error = e.localizedMessage ?: "GPS Initialization Failed"))
         }
